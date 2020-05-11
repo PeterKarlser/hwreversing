@@ -6,7 +6,7 @@
                       *[--sed-command SED_COMMAND]*
                       *[--conversion-command CONVERSION_COMMAND]*
 
-This script is compatible with Debial based Linux systems, it has been written to extract the firmware of a Grandstream HT814 via serial console.
+This script is compatible with Debian based Linux systems, it has been written to extract the firmware of a Grandstream HT814 via serial console.
 
 Once the script has been executed, the device can be plugged in and everything is done automatically from there. It uses U-Boot `md` to dump the firmware once it has been read into memory  with `qspi`. Once the firmware has been dumped in a text file, a subprocess executes a `sed` command to strip off the memory addresses and ASCII data from the file, leaving only 8 bits hex characters. Finally the file is converted to binary with the reverse option of `xdd`.
 
